@@ -1,0 +1,89 @@
+body{   
+    background: #383636;
+    color: #fff; 
+     
+}  
+#frm{  
+    border: solid gray 1px;  
+    width:25%;  
+    border-radius: 2px;  
+    margin: 120px auto;  
+    background: transparent;  
+    padding: 50px;  
+}  
+#btn{  
+    color: #fff;  
+    background: #337ab7;  
+    padding: 7px;  
+    border: #337ab7;
+    border-radius:10%;
+    width: 50%;
+    margin-left: 10%;
+}  
+#btn:hover{  
+    color: #ae4444;  
+    background:#a6d0ac;  
+    padding: 7px;  
+    size: 25px;
+    border: #337ab7 ;
+}  
+#frm{
+    margin: 200px auto;
+    padding: 2em;
+    width: 25%;
+    height:40%;
+    background: #1c1f2b;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  #frm::after, .card::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+  }
+  #frm::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
+
+  input{
+    height: 30px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    font-size: 14px;
+   
+}
+#newuser{
+    margin-left: 80%;
+    margin-bottom:5px;
+    direction: none;
+    size: 25px;
+    color: #a6d0ac;
+
+}
