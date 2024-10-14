@@ -1,6 +1,6 @@
 <?php
 include('header.html');
-echo"hallo";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
